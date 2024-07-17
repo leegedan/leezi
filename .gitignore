@@ -5,5 +5,7 @@ es
 .idea
 .cache
 .DS_Store
+.nitro
+.output
 pnpm-lock.yaml
 package-lock.json
