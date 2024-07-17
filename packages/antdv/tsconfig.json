@@ -1,0 +1,9 @@
+{
+  "extends": ["@vue/tsconfig/tsconfig.json"],
+  "compilerOptions": {
+    "lib": ["ES2016", "DOM", "DOM.Iterable"],
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  }
+}
