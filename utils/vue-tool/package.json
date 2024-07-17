@@ -1,0 +1,15 @@
+{
+  "name": "@leezi/p",
+  "version": "0.0.1",
+  "description": "",
+  "main": "es/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  }
+}
