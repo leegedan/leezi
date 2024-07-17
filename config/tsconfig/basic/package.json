@@ -1,0 +1,12 @@
+{
+  "name": "@leezi/tsconfig",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tsconfig.json",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

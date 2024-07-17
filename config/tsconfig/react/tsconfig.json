@@ -1,0 +1,11 @@
+{
+  "extends": "@leezi/tsconfig",
+  "compilerOptions": {
+    "jsx": "react",
+    "lib": [
+      "ES2016",
+      "DOM",
+      "DOM.Iterable",
+    ]
+  }
+}

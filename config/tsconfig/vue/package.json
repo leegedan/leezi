@@ -1,0 +1,16 @@
+{
+  "name": "@leezi/tsconfig-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tsconfig.json",
+  "types": "index.d.ts",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@leezi/tsconfig": "workspace:^"
+  }
+}

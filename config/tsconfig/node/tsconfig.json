@@ -1,0 +1,7 @@
+{
+  "extends": "@leezi/tsconfig",
+  "compilerOptions": {
+    "types": ["node"],
+    "moduleResolution": "node"
+  }
+}
