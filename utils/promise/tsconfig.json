@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./es",
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution":"Bundler",
+    "allowJs": true
+  }
+}
