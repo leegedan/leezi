@@ -1,0 +1,48 @@
+export default eventHandler(() => {
+    return {
+        code: 200,
+        msg: 'success',
+        data: [
+            // { id: 1, name: '首页', path: '/home', parentId: 0, isMenu: true, },
+            { id: 1, name: '订单', path: '/order', parentId: 0, isMenu: true, },
+            { id: 2, name: '员工', path: '/staff', parentId: 0, isMenu: true, },
+            { id: 3, name: '设置', path: '/setting', parentId: 0, isMenu: true, },
+            { id: 4, name: '订单列表', path: '/order/list', parentId: 1, isMenu: true, },
+            { id: 5, name: '员工列表', path: '/staff/list', parentId: 2, isMenu: true, },
+            { id: 11, name: '部门', path: '/staff/dept', parentId: 2, isMenu: true, },
+            { id: 6, name: '账号管理', path: '/setting/user', parentId: 3, isMenu: true, },
+            { id: 7, name: '角色列表', path: '/setting/role', parentId: 3, isMenu: true, },
+            { id: 8, name: '菜单列表', path: '/setting/menu', parentId: 3, isMenu: true, },
+            { id: 9, name: '元数据', path: '/setting/meta', parentId: 3, isMenu: true, },
+            { id: 10, name: '数据字典', path: '/setting/dict', parentId: 3, isMenu: true, },
+
+            { id: 41, name: '新增', path: 'add', parentId: 4, isMenu: false, },
+            { id: 42, name: '修改', path: 'edit', parentId: 4, isMenu: false, },
+            { id: 43, name: '删除', path: 'delete', parentId: 4, isMenu: false, },
+            { id: 51, name: '新增', path: 'add', parentId: 5, isMenu: false, },
+            { id: 52, name: '修改', path: 'edit', parentId: 5, isMenu: false, },
+            { id: 53, name: '删除', path: 'delete', parentId: 5, isMenu: false, },
+            { id: 54, name: '导出', path: 'export', parentId: 5, isMenu: false, },
+            { id: 111, name: '新增', path: 'add', parentId: 11, isMenu: false, },
+            { id: 112, name: '修改', path: 'edit', parentId: 11, isMenu: false, },
+            { id: 113, name: '删除', path: 'delete', parentId: 11, isMenu: false, },
+            { id: 61, name: '新增', path: 'add', parentId: 6, isMenu: false, },
+            { id: 62, name: '修改', path: 'edit', parentId: 6, isMenu: false, },
+            { id: 63, name: '删除', path: 'delete', parentId: 6, isMenu: false, },
+            { id: 71, name: '新增', path: 'add', parentId: 7, isMenu: false, },
+            { id: 72, name: '修改', path: 'edit', parentId: 7, isMenu: false, },
+            { id: 73, name: '删除', path: 'delete', parentId: 7, isMenu: false, },
+            { id: 81, name: '新增', path: 'add', parentId: 8, isMenu: false, },
+            { id: 82, name: '修改', path: 'edit', parentId: 8, isMenu: false, },
+            { id: 83, name: '删除', path: 'delete', parentId: 8, isMenu: false, },
+            { id: 91, name: '新增', path: 'add', parentId: 9, isMenu: false, },
+            { id: 92, name: '修改', path: 'edit', parentId: 9, isMenu: false, },
+            { id: 93, name: '删除', path: 'delete', parentId: 9, isMenu: false, },
+            { id: 101, name: '新增', path: 'add', parentId: 10, isMenu: false, },
+            { id: 102, name: '修改', path: 'edit', parentId: 10, isMenu: false, },
+            { id: 103, name: '删除', path: 'delete', parentId: 10, isMenu: false, },
+
+            { id: 1000, name: '组件', path: '/components', parentId: 0, isMenu: true, },
+        ]
+    }
+})

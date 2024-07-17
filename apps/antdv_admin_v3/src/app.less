@@ -1,0 +1,177 @@
+// @import './variable.less';
+
+
+.ant-form.ant-form-horizontal {
+
+    &.x-search-wrap,
+    &.x-form-wrap,
+    &.form-4col-wrap,
+    &.form-3col-wrap,
+    &.form-2col-wrap,
+    &.form-1col-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -12px;
+        margin-right: -12px;
+
+        .ant-form-item {
+            // width: 25%;
+            padding-left: 12px;
+            padding-right: 12px;
+            display: flex;
+
+            &.full {
+                width: 100%;
+            }
+
+            &.half {
+                width: 50%;
+            }
+
+            &.rest {
+                flex: 1;
+            }
+
+            .ant-form-item-label {
+                min-width: 80px;
+                max-width: 160px;
+            }
+
+            .ant-form-item-control-wrapper {
+                flex: 1;
+            }
+
+            .ant-form-item-control {
+                .ant-calendar-picker {
+                    width: 100%;
+                }
+
+                .ant-input-number {
+                    width: 100%;
+                }
+            }
+        }
+
+        .ant-form-row {
+            width: 100%;
+        }
+    }
+
+    &.form-4col-wrap .ant-form-item {
+        width: 25%;
+    }
+
+    &.form-3col-wrap .ant-form-item {
+        width: 33.333%;
+    }
+
+    &.form-2col-wrap .ant-form-item {
+        width: 50%;
+    }
+
+    &.form-1col-wrap .ant-form-item {
+        width: 100%;
+    }
+
+    &.thin {
+        .ant-form-item {
+            margin-bottom: 12px;
+        }
+
+        .ant-form-explain {
+            display: none;
+        }
+    }
+}
+
+
+
+
+@media screen and (min-width: var(--antdv-screen-md)) {
+
+    .ant-form.ant-form-horizontal.x-form-wrap,
+    .ant-form.ant-form-horizontal.x-search-wrap {
+        .ant-form-item {
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (min-width: var(--antdv-screen-xl)) {
+
+    .ant-form.ant-form-horizontal.x-form-wrap,
+    .ant-form.ant-form-horizontal.x-search-wrap {
+        .ant-form-item {
+            width: 33.333%;
+        }
+    }
+}
+
+@media screen and (min-width: var(--antdv-screen-xxl)) {
+
+    .ant-form.ant-form-horizontal.x-form-wrap,
+    .ant-form.ant-form-horizontal.x-search-wrap {
+        .ant-form-item {
+            width: 25%;
+        }
+    }
+}
+
+@media screen and (max-width: var(--antdv-screen-xs)) {
+
+    .ant-form.ant-form-horizontal.x-form-wrap,
+    .ant-form.ant-form-horizontal.x-search-wrap {
+        .ant-form-item {
+            width: 100%;
+
+            .ant-form-item-label {
+                max-width: 80px;
+                padding-top: 8px;
+                text-align: right;
+                margin-right: 8px;
+            }
+        }
+    }
+
+    .x-ant-drawer {
+        .ant-drawer-content-wrapper {
+            width: 80% !important;
+        }
+    }
+}
+
+
+.x-row {
+    display: flex;
+    flex-direction: row;
+
+    &>.full {
+        flex: 1;
+    }
+}
+
+.x-col {
+    display: flex;
+    flex-direction: column;
+
+    &>.full {
+        flex: 1;
+    }
+}
+
+
+.ant-input-group.ant-input-group-compact.x-input-modal-wrap {
+    display: flex;
+}
+
+
+.table-operation-cell-wrap, .tocw {
+    a {
+        // margin: 0 4px;
+        margin-left: 8px;
+    }
+}
+
+.page-table-list-toolbar, .ptlt {
+    padding: 12px;
+}
