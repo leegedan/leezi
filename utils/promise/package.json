@@ -2,17 +2,19 @@
   "name": "@leezi/p",
   "version": "0.0.1",
   "description": "",
-  "main": "es/index.js",
+  "main": "dist/index.mjs",
   "scripts": {
-    "build": "tsc"
+    "build": "unbuild"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "p-limit": "^6.1.0",
     "p-queue": "^8.0.1",
-    "p-retry": "^6.2.0",
-    "typescript": "^5.5.3"
+    "p-retry": "^6.2.0"
+  },
+  "devDependencies": {
+    "unbuild": "^2.0.0"
   }
 }

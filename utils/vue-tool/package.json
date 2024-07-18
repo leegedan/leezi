@@ -1,15 +1,23 @@
 {
-  "name": "@leezi/p",
+  "name": "@leezi/vtool",
   "version": "0.0.1",
   "description": "",
-  "main": "es/index.js",
+  "main": "dist/index.mjs",
   "scripts": {
-    "build": "tsc"
+    "build": "unbuild"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.5.3"
+    "unbuild": "^2.0.0"
+  },
+  "dependencies": {
+    "p-limit": "^6.1.0",
+    "p-queue": "^8.0.1",
+    "p-retry": "^6.2.0",
+    "@v-c/utils": "^0.0.26",
+    "dayjs": "^1.11.11",
+    "lodash-es": "^4.17.21"
   }
 }
