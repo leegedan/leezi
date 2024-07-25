@@ -16,12 +16,16 @@ const Props = copy(Table.props, {
   selectionAlert: T.bool.def(false),
   size: T.string.def('middle'),
 
-  // tbCtrl: T.bool.def(false),
+  tbCtrl: T.bool.def(false),
 
   scroll: {
     type: Object,
     default: () => ({ x: true }),
   },
+  // rowSelection: {
+  //   type: Object,
+  //   default: null,
+  // },
 })
 const XTable = defineComponent({
   name: `${prefix}Table`,
@@ -69,12 +73,12 @@ const XTable = defineComponent({
       const fn = props.customRow
       if (props.selection === 'one') {
         return (record, index) => {
-          const result = fn?.(record, index)
+          const result = fn?.call(null, record, index)
           return {
             ...result,
             onClick: (e) => {
               updateSelect([record[rowKey]], [record])
-              result?.onClick?.(e)
+              result?.onClick?.call(null, e)
             },
           }
         }
@@ -203,7 +207,7 @@ const XTable = defineComponent({
     const updateSelect = (keys, rows) => {
       state.selectedRowKeys = keys
       emit('select', keys, rows)
-      props.rowSelection?.onChange?.(keys, rows)
+      props.rowSelection?.onChange?.call(null, keys, rows)
     }
 
     const clearSelected = (removeKeys) => {
@@ -234,7 +238,7 @@ const XTable = defineComponent({
         'pagination',
         'loading',
         'onChange',
-        // 'tbCtrl',
+        'tbCtrl',
       ])
 
       return (

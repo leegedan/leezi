@@ -92,7 +92,7 @@ const columns = [
   {
     title: '部门',
     dataIndex: 'deptId',
-    fmt: { type: 'dict', key: 'DEPT' }
+    fmt: { type: 'dict', dk: 'DEPT', ns: 'FW' }
   },
   {
     title: '年龄',
@@ -101,7 +101,7 @@ const columns = [
   {
     title: '薪资',
     dataIndex: 'salary',
-    fmt: { type: 'cny', key: '¥' }
+    fmt: { type: 'cny', fmt: '¥' }
   },
   {
     title: '状态',
@@ -112,7 +112,7 @@ const columns = [
   {
     title: '侧写',
     dataIndex: 'desc',
-    fmt: { type: 'dict', key: 'RWCX', async: true }
+    fmt: { type: 'dict', dk: 'RWCX', ns: 'ZD' }
   },
 
   {
