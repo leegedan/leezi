@@ -2,10 +2,12 @@ import { find as fetchDict } from '@/api/base/dict'
 import { createDictSpace } from '../../components/cache/dict'
 
 const modules = import.meta.glob('./data/*.ts', { eager: true })
-const map = Object.entries(modules).reduce((mod, next) => { return Object.assign(next, mod) }, {})
+const map: any = Object.values(modules).reduce((mod: any, next: any) => {
+    return Object.assign(mod, next['default'])
+}, {})
 
 function getDict(key) {
-    return fetchDict({ key }).then(res => {
+    return fetchDict(key).then(res => {
         return res.data.map(item => {
             return {
                 ...item,
@@ -30,14 +32,16 @@ export function useZdSpace() {
             return data
         } else {
             if (map[key]) {
-                return getDict(map[key])
-                    .then(list => {
-                        _set(key, list)
-                        return list
-                    }).catch(e => {
-                        // 
-                        return []
-                    })
+                const result = getDict(map[key]).then(list => {
+                    _set(key, list)
+                    return list
+                }).catch(e => {
+                    _set(key, undefined)
+                    return []
+                })
+                _set(key, result)
+                return result
+
             } else {
                 console.error(`ZdSpace未配置[${key}]`)
             }

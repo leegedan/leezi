@@ -41,7 +41,7 @@ const XTreeSelect = defineComponent({
         treeDefaultExpandAll: true,
         treeData: treeData.value,
         onChange,
-        // style: { width: "100%" },
+        style: { width: "100%" },
       };
 
       return <TreeSelect {...innerProps} v-slots={slots}></TreeSelect>;

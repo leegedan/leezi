@@ -22,7 +22,7 @@ export default eventHandler(() => {
       phone: `${Mock.mock('@integer(12000000000, 19999999999)')}`,
       salary: Mock.mock('@integer(300050, 5000000)'),
       join: Mock.mock('@date'),
-      deptId: Mock.mock('@pick(["1", "2", "3", "4", "11", "21", "22", "31", "32", "33", "41"])'),
+      deptId: Mock.mock('@pick([1, 2, 3, 4, 11, 21, 22, 31, 32, 33, 41])'),
       desc: Mock.mock('@pick([ "1", "2", "3", "4"])'),
       status: Mock.mock('@pick(["1", "1", "1", "2", "3"])'), // 在职， 离职， 停职
     })),

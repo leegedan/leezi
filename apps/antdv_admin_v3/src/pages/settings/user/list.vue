@@ -42,10 +42,10 @@
           <a-input-password v-model:value="m.password"></a-input-password>
         </a-form-item>
         <a-form-item label="角色" name="roles" :rules="{ required: true, trigger: 'change', message: '请选择角色' }">
-          <d-select v-model:value="m.roles" dk="ROLE" async mode="multiple" />
+          <xd-select v-model:value="m.roles" dk="ROLE" async mode="multiple" />
         </a-form-item>
         <a-form-item label="绑定员工">
-          <d-select v-model:value="m.staffId" dk="STAFF" async />
+          <xd-select v-model:value="m.staffId" dk="STAFF" async />
         </a-form-item>
       </a-form>
     </a-modal>

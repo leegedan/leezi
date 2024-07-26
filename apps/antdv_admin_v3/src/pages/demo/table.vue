@@ -22,7 +22,7 @@
         <a-form-item label="用户名">
           <a-input v-model:value="m.username" />
         </a-form-item>
-
+<!-- 
         <a-form-item label="日期">
           <XRangePicker v-model:value="m.begin" :model="m"></XRangePicker>
         </a-form-item>
@@ -32,7 +32,7 @@
         </a-form-item>
         <a-form-item label="启用2">
           <NInput v-model:value="m.nn"></NInput>
-        </a-form-item>
+        </a-form-item> -->
         <a-form-item label="用户名">
           <!-- <SelectStaff2 v-model:visible="visible" @change="onTest1">
             <a-button @click="onTest2">TT</a-button>
@@ -59,16 +59,11 @@
 <script setup>
 import { reactive, toRaw, toRef } from 'vue';
 import SearchForm from '@/core/components/form/SearchForm'
-import XRangePicker from '@/core/components/Date/XRangePicker';
-import XSwitch from '@/core/components/switch/XSwitch';
-import XCheckbox from '@/core/components/switch/XCheckbox';
-import NInput from '@/core/components/input/NInput';
 import { search as getList } from '@/api/staff/staff'
 import { Modal } from 'ant-design-vue';
 import SelectStaff from '@/core/services/components/modal/SelectStaffModal'
 import SelectStaff1 from '@/core/services/components/modal/MultiSelectStaffModal'
 // import SelectStaff2 from '@/core/services/components/modal/SlotStaffModal'
-import { CopyOutlined, CloseCircleFilled } from '@ant-design/icons-vue'
 import NKP from './kp'
 import {
   C1,

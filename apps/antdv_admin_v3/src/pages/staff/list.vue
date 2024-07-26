@@ -8,7 +8,7 @@
         <DeptTree v-model:value="q.deptId"></DeptTree>
       </a-form-item>
       <a-form-item label="创建时间">
-        <x-range-picker v-model:value="q.startTime" :model="q" begin="startTime" end="endTime"></x-range-picker>
+        <xd-range v-model:begin="q.startTime" v-model:end="q.endTime"></xd-range>
       </a-form-item>
       <a-form-item>
         <span>
@@ -48,16 +48,16 @@
           <DeptTree v-model:value="m.deptId"></DeptTree>
         </a-form-item>
         <a-form-item label="状态">
-          <d-select v-model:value="m.status" dk="YGZT" />
+          <xd-select v-model:value="m.status" dk="TS3" ns="ZD" />
         </a-form-item>
         <!-- <a-form-item label="岗位">
           <a-input v-model:value="m.jobTitle"></a-input>
         </a-form-item> -->
         <a-form-item label="薪资" name="salary">
-          <n-input v-model:value="m.salary" />
+          <xin-number v-model:value="m.salary" />
         </a-form-item>
         <a-form-item label="侧写">
-          <d-select v-model:value="m.desc" dk="RWCX" async />
+          <xd-select v-model:value="m.desc" dk="TS2" ns="ZD" />
         </a-form-item>
         <a-form-item label="备注" class="full">
           <a-textarea v-model:value="m.remark" :auto-size="{ minRows: 2, maxRows: 3 }" />
@@ -92,7 +92,7 @@ const columns = [
   {
     title: '部门',
     dataIndex: 'deptId',
-    fmt: { type: 'dict', dk: 'DEPT', ns: 'FW' }
+    render: { type: 'dict', dk: 'DEPT', ns: 'FW' }
   },
   {
     title: '年龄',
@@ -101,18 +101,18 @@ const columns = [
   {
     title: '薪资',
     dataIndex: 'salary',
-    fmt: { type: 'cny', fmt: '¥' }
+    render: { type: 'cny', fmt: '¥' }
   },
   {
     title: '状态',
     dataIndex: 'status',
-    fmt: { type: 'dict', key: 'YGZT' }
+    render: { type: 'dict', dk: 'YGZT'}
   },
 
   {
     title: '侧写',
     dataIndex: 'desc',
-    fmt: { type: 'dict', dk: 'RWCX', ns: 'ZD' }
+    render: { type: 'dict', dk: 'TS3', ns: 'ZD' }
   },
 
   {

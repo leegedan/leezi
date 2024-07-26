@@ -48,7 +48,7 @@ const SearchForm = defineComponent({
     );
 
     const dictRender = (k, ps) => (
-      <d-select v-model:value={m[k]} {...ps}></d-select>
+      <xd-select v-model:value={m[k]} {...ps}></xd-select>
     );
 
     const componentRender = (k, ps, Comp) => (

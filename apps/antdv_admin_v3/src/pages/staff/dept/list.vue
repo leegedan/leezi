@@ -33,7 +33,7 @@
           <a-input v-model:value="m.name"></a-input>
         </a-form-item>
         <a-form-item label="负责人">
-          <d-select v-model:value="m.owners" dk="STAFF" async></d-select>
+          <xd-select v-model:value="m.owners" dk="STAFF" async></xd-select>
         </a-form-item>
       </a-form>
     </a-modal>
