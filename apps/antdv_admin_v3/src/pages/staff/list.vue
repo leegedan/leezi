@@ -48,7 +48,7 @@
           <DeptTree v-model:value="m.deptId"></DeptTree>
         </a-form-item>
         <a-form-item label="状态">
-          <xd-select v-model:value="m.status" dk="TS3" ns="ZD" />
+          <xd-select v-model:value="m.status" dk="YGZT" />
         </a-form-item>
         <!-- <a-form-item label="岗位">
           <a-input v-model:value="m.jobTitle"></a-input>

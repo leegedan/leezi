@@ -17,7 +17,7 @@ const DSelect = defineComponent({
   setup(props, { emit, slots }) {
     const options = shallowRef<Array<any>>([])
     const { dk, ns, placeholder = '请选择' } = props
-
+  
     getData(ns, dk).then((list) => {
       options.value = list
     })
@@ -44,13 +44,13 @@ const DSelect = defineComponent({
     return () => {
       const restProps = omit(props, ['dk', 'ns', 'onChange', 'onUpdate:value'])
       return (
-        <a-select
+        <Select
           {...restProps}
           options={options.value}
           placeholder={placeholder}
           onChange={onChange}
           v-slots={slots}
-        ></a-select>
+        ></Select>
       )
     }
   },
