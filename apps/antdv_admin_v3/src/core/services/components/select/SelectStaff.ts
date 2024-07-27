@@ -1,5 +1,5 @@
 import { makeSelect } from '../../factory'
-import { all as fetchData } from '@/api/staff/staff'
+import { search as fetchData } from '@/api/staff/staff'
 
 export default makeSelect({
   data: () => {

@@ -34,12 +34,12 @@ const BaseSelect = defineComponent({
 
 
       return (
-        <a-select
+        <Select
           {...selectProps}
           options={options.value}
           loading={loading.value}
           v-slots={slots}
-        ></a-select>
+        ></Select>
       );
     };
   },

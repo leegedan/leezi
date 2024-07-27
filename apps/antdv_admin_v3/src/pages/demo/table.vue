@@ -22,7 +22,15 @@
         <a-form-item label="用户名">
           <a-input v-model:value="m.username" />
         </a-form-item>
-<!-- 
+        <a-form-item label="用户名">
+          <SelectStaff v-model:value="m.xx" />
+        </a-form-item>
+
+        <a-form-item label="用户名">
+          <SelectStaff1 v-model:value="m.xx" />
+        </a-form-item>
+
+        <!-- 
         <a-form-item label="日期">
           <XRangePicker v-model:value="m.begin" :model="m"></XRangePicker>
         </a-form-item>
@@ -57,122 +65,92 @@
 </template>
 
 <script setup>
-import { reactive, toRaw, toRef } from 'vue';
-import SearchForm from '@/core/components/form/SearchForm'
-import { search as getList } from '@/api/staff/staff'
-import { Modal } from 'ant-design-vue';
-import SelectStaff from '@/core/services/components/modal/SelectStaffModal'
-import SelectStaff1 from '@/core/services/components/modal/MultiSelectStaffModal'
+import { reactive, toRaw, toRef } from "vue";
+import SearchForm from "@/core/components/form/SearchForm";
+import { search as getList } from "@/api/staff/staff";
+import { Modal } from "ant-design-vue";
+import SelectStaff from "@/core/services/components/select/SelectStaff";
+import SelectStaff1 from '@/core/services/components/modal/SelectStaffModal'
+// import SelectStaff1 from '@/core/services/components/modal/MultiSelectStaffModal'
 // import SelectStaff2 from '@/core/services/components/modal/SlotStaffModal'
-import NKP from './kp'
-import {
-  C1,
-  C2,
-  C3
-} from './test'
+import NKP from "./kp";
+import { C1, C2, C3 } from "./test";
 
 const columns = [
   {
-    dataIndex: 'rowNum'
+    dataIndex: "rowNum",
   },
   {
-    title: '头像',
-    dataIndex: 'avatar',
-    align: 'center',
-    customCell: (r, i) => ({
-      style: { padding: '2px 0' }
-    }),
+    title: "姓名",
+    dataIndex: "name",
   },
   {
-    title: '姓名',
-    dataIndex: 'name'
+    title: "联系方式",
+    dataIndex: "phone",
   },
   {
-    title: '联系方式',
-    dataIndex: 'phone'
+    title: "年龄",
+    dataIndex: "age",
   },
   {
-    title: '部门',
-    dataIndex: 'deptId',
-    fmt: { type: 'dict', key: 'DEPT' }
-  },
-  {
-    title: '年龄',
-    dataIndex: 'age'
-  },
-  {
-    title: '薪资',
-    dataIndex: 'salary',
-    fmt: { type: 'cny', key: '¥' },
+    title: "薪资",
+    dataIndex: "salary",
+    fmt: { type: "cny", key: "¥" },
     customCell: () => ({
-      style: { textAlign: 'right' }
+      style: { textAlign: "right" },
     }),
   },
   {
-    title: '状态',
-    dataIndex: 'status',
-    fmt: { type: 'dict', key: 'YGZT' }
-  },
-
-  {
-    title: '侧写',
-    dataIndex: 'desc',
-    fmt: { type: 'dict', key: 'RWCX', async: true }
-  },
-
-  {
-    title: '入职日期',
-    dataIndex: 'join'
+    title: "入职日期",
+    dataIndex: "join",
     // fmt: { type: 'date', key: 'YYYY-MM-DD' }
   },
   {
-    title: '操作',
-    key: 'operation',
-    align: 'right',
-    fixed: 'right',
-    width: '140px',
-  }
-]
+    title: "操作",
+    key: "operation",
+    align: "right",
+    fixed: "right",
+    width: "140px",
+  },
+];
 
 const m = reactive({
   // begin: '2012-01-01',
   //   end: '2012-02-11'
-})
-const refm = toRef(m)
-const visible = toRef(false)
+});
+const refm = toRef(m);
+const visible = toRef(false);
 
 // const cols = reactive(columns)
 
 const loadData = (parm) => {
-  const data = { ...parm }
-  return getList(data)
-}
+  const data = { ...parm };
+  return getList(data);
+};
 
 const onSearch = (data) => {
-  console.log(data)
-}
+  console.log(data);
+};
 
 setTimeout(() => {
-
-  m.end = '2012-02-11'
-  m.begin = '2012-01-01'
+  m.end = "2012-02-11";
+  m.begin = "2012-01-01";
   // refm.value = {
   //   begin: '2012-01-01',
   //   end: '2012-02-11'
   // }
-}, 3000)
+}, 3000);
 const onTest = () => {
-  const data = toRaw(m)
-  console.log(data)
-}
+  const data = toRaw(m);
+  console.log(data);
+};
 
 const onTest1 = (e, x) => {
-  console.log(e)
-  console.log(x)
-}
-
+  console.log(e);
+  console.log(x);
+};
 
 const onTest2 = (e) => {
-  visible.value = true
-}
+  visible.value = true;
+};
 </script>

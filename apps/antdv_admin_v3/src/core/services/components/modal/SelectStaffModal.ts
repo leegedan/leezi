@@ -23,11 +23,11 @@ const props = {
       }
     ]
   },
-  loadData: (parm) => {
+  data: (parm) => {
     return search(parm)
   }
 }
 
-const Component = makeInputSearchModal(props, 'radio')
+const Component = makeInputSearchModal(props)
 Component.name = 'YoHo'
 export default Component
