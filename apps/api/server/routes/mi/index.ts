@@ -1,3 +1,3 @@
 export default eventHandler(() => {
-  return { nitro: 'hello mall' }
+  return { nitro: 'hello mi' }
 })
